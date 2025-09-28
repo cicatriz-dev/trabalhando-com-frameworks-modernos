@@ -13,7 +13,7 @@ const Header = () => {
 	const handleSearch = (e: React.FormEvent) => {
 		e.preventDefault();
 		if (searchQuery.trim()) {
-			router.push(`/search/${encodeURIComponent(searchQuery)}`);
+			router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
 			setSearchQuery('');
 		}
 	};

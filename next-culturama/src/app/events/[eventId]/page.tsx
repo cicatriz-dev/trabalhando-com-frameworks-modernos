@@ -114,8 +114,11 @@ const EventDetail = () => {
 							src={event.image}
 							alt={event.name}
 							className='w-full h-full object-cover'
-							width={800}
-							height={800}
+							fill
+							quality={100}
+							priority
+							sizes='(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw'
+							style={{ imageRendering: 'auto' }}
 							onError={() => setImageError(true)}
 						/>
 					)}
