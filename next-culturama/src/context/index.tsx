@@ -15,6 +15,9 @@ export const DataProvider = ({ children }: DataProviderProps) => {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
 
+	console.log('events data context', events);
+	console.log('categories data context', categories);
+
 	const fetchData = async () => {
 		try {
 			setLoading(true);
